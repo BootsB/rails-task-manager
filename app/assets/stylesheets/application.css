@@ -14,3 +14,25 @@
  *= require_self
  */
 
+ .bd-callout {
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #eee;
+    border-left-width: 1px;
+    border-left-color: rgb(238, 238, 238);
+  border-left-width: .25rem;
+  border-radius: .25rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+}
+
+.bd-callout-success {
+  border-left-color: #00ff8c;
+}
+
+.bd-callout-danger {
+  border-left-color: #ff0015;
+}

@@ -1,11 +1,15 @@
-<h2><%= @task.title %></h2>
-<p><%= @task.details %></p>
-<%= @task.completed ? "Task Completed" : "Task NOT Completed" %>
-
-<p><%= link_to "Edit task", edit_task_path %></p>
-<p><%= link_to "Delete",
-  task_path(@task),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%></p>
+<h2 class="mt-3"><%= @task.title %></h2>
+<% if @task.completed %>
+  <p class="bd-callout bd-callout-success"><%= @task.details %></p>
+<% else %>
+  <p class="bd-callout bd-callout-danger"><%= @task.details %></p>
+<% end %>
 <br>
-<p><%= link_to "Back to list", "/" %></p>
+<p>
+  <%= link_to "Edit task", edit_task_path, class: "btn btn-warning"%>
+  <%= link_to "Delete",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+  class: "btn btn-danger"%>
+  <%= link_to "Back to list", "/", class: "btn btn-primary" %>
+</p>
