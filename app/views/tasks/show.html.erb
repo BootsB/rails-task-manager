@@ -6,10 +6,10 @@
 <% end %>
 <br>
 <p>
-  <%= link_to "Edit task", edit_task_path, class: "btn btn-warning"%>
+  <%= link_to "Edit task", edit_task_path, class: "btn btn-outline-warning"%>
   <%= link_to "Delete",
   task_path(@task),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
-  class: "btn btn-danger"%>
-  <%= link_to "Back to list", "/", class: "btn btn-primary" %>
+  class: "btn btn-outline-danger"%>
+  <%= link_to "Back to list", "/", class: "btn btn-outline-primary" %>
 </p>

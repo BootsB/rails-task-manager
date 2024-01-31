@@ -30,9 +30,15 @@
 }
 
 .bd-callout-success {
-  border-left-color: #00ff8c;
+  border-left-color: #00b664;
 }
 
 .bd-callout-danger {
   border-left-color: #ff0015;
+}
+
+.list-group {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
